@@ -1,0 +1,32 @@
+//  Generated Leanbot Arduino code
+//    by Leanbot Blockly Editor 2024-09-15
+//    at 2025-07-24 16:30:55
+
+#include <Leanbot.h>
+
+void setup() {
+  Leanbot.begin();
+}
+
+void loop() {
+  LbMission.begin(TB1A + TB1B);
+  LbMotion.runLR(2000, 200);
+  LbDelay(1100);
+  LbMotion.stopAndWait();
+  LbMotion.runLR(2000, 2000);
+  LbMotion.waitDistanceMm(17.5 * 10);
+  LbMotion.stopAndWait();
+  LbMotion.runLR(200, 2000);
+  LbDelay(2300);
+  LbMotion.stopAndWait();
+  LbMotion.runLR(2000, 2000);
+  LbMotion.waitDistanceMm(14.7 * 10);
+  LbMotion.stopAndWait();
+  LbMotion.runLR(2000, 200);
+  LbDelay(3400);
+  LbMotion.stopAndWait();
+  LbMotion.runLR(2000, 2000);
+  LbMotion.waitDistanceMm(66.9 * 10);
+  LbMotion.stopAndWait();
+  LbMission.end();
+}
