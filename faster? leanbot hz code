@@ -1,0 +1,45 @@
+#include <Leanbot.h>
+
+void setup() {
+  Leanbot.begin();
+}
+
+void loop() {
+  LbMission.begin(TB1A + TB1B);
+
+  // Intro (shifted up ~2 octaves)
+  Leanbot.tone(1480, 400); // F#m7 root up
+  LbDelay(400);
+  Leanbot.tone(1100, 400); // C#m7 root up
+  LbDelay(400);
+  Leanbot.tone(1320, 400); // Emaj7 root up
+  LbDelay(400);
+  Leanbot.tone(1100, 400); // C#m7 root up
+  LbDelay(400);
+
+  Leanbot.tone(1480, 400); // F#m7 again
+  LbDelay(400);
+  Leanbot.tone(1100, 400);
+  LbDelay(400);
+  Leanbot.tone(1320, 400);
+  LbDelay(400);
+  Leanbot.tone(1320, 400);
+  LbDelay(400);
+
+  // Example chorus section, higher frequency versions
+  Leanbot.tone(1760, 300); // Amaj7 root up
+  LbDelay(300);
+  Leanbot.tone(1660, 300); // G#m7 root up
+  LbDelay(300);
+  Leanbot.tone(1320, 300); // Emaj7 root up
+  LbDelay(300);
+  Leanbot.tone(1100, 300); // C#m7 root up
+  LbDelay(300);
+
+  Leanbot.tone(988, 400); // B chord up
+  LbDelay(400);
+  Leanbot.tone(1480, 400); // F#m7 root up
+  LbDelay(400);
+
+  LbMission.end();
+}
